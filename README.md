@@ -2,7 +2,7 @@
 <h2>The creation of a MAAS environment</h2>
 
 **Creating the local environment:** 
-creating a local environment to test new images. This was done through an ubuntu desktop and used an lxd host to creat VMs within MAAS.
+creating a local environment to test new images. This was done through an ubuntu desktop and used an lxd host to creat VMs within MAAS. This was done on a ubuntu desktop with virtualization enabled.
 
 <h3>Installed multipass on ubuntu desktop</h3>
 	
