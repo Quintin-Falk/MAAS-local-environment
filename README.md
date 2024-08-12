@@ -25,3 +25,19 @@ Deploy that VM with ubuntu image to make sure that VM's are running correctly
 
 **<h2>Testing:</h2>**
 <h4>-Pinging and ssh into the ip of the newly created VM</h4>
+
+
+	sudo apt-get update
+	sudo snap install lxd
+	sudo lxd init --auto
+	sudo snap install --channel=3.3 maas
+ 	sudo iptables -t nat -A POSTROUTING -s 10.0.0.0/8 -j MASQUERADE
+	sudo ip link set dev lxdbr0 up
+ 	sudo apt-get install -y postgresql
+	sudo systemctl start postgresql
+	sudo systemctl enable postgresql
+ 	sudo maas init region+rack --database-uri postgres://admin:admin@localhost/maas
+  	sudo maas createadmin
+	ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
+	sudo iptables -t nat -A POSTROUTING -s 10.0.0.0/8 -o eth0 -j MASQUERADE
+  
